@@ -11,7 +11,7 @@ function addBinary(first, second) {
 var num1 = '1010';
 // console.log(addBinary(num1, num1));
 
-// Note: 其他进制向十进制转换用parseInt, 十进制向其他进制转换用toString
+// Note: 其他进制（字符串）向十进制转换用parseInt, 十进制(数字)向其他进制转换用toString
 
 function addBinaryV2(one, two) {
     var result = '';
