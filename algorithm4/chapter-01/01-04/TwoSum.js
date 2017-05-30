@@ -1,6 +1,6 @@
 
 const readLineSync = require('../../utils/readLine');
-const binarySearch = require("../binarySearch");
+const binarySearch = require("../01-01-10/binarySearch");
 
 function twoSum(arr) {
     // 排序

@@ -27,7 +27,7 @@ class LinkedList {
         for(let curr = this.first; curr.next !== null; curr = curr.next) {
             result = curr.item + " " + result;
         }
-        console.log(result);
+        return result
     }
     iterator(callback) {
         let curr;
