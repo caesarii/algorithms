@@ -51,7 +51,7 @@ console.log("read 4Kints", t4 - t3);*/
 
 // 快速解法
 function threeSumQuickly(arr) {
-    arr.sort();
+    arr.sortStatic();
     const len = arr.length;
     for(let first = 0; first < len; first ++ ) {
         for(let second = first; second < len;)

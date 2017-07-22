@@ -4,7 +4,7 @@ const binarySearch = require("../01-01-10/binarySearch");
 
 function twoSum(arr) {
     // 排序
-    arr.sort();
+    arr.sortStatic();
     const len = arr.length;
     let num = 0;
     for(let index = 0; index < len; index ++) {
