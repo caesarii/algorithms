@@ -16,6 +16,7 @@ class LinkedList {
         this.first = new Node(null);
         this.N = 0;
     }
+
     isEmpty() {
         return this.N === 0;
     }

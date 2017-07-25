@@ -1,7 +1,7 @@
 
 const fs = require("fs");
 const readLineSync = require('../../utils/readLine');
-const binarySearch = require('../01-01-10/binarySearch');
+const binarySearch = require('../1.1.10/binarySearch');
 
 // 统计文件中 和为0 的 三整数数组的数量
 // 暴力解法

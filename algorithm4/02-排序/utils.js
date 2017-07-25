@@ -9,5 +9,9 @@ const exchange = (arr, indexA, indexB) => {
     arr[indexB] = eleA
     return arr
 }
+
+const less = (eleA, eleB) => {
+    return eleA < eleB
+}
 module.exports = {log, exchange}
 
