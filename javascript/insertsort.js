@@ -1,6 +1,6 @@
-
 const {log, exchange} = require('./utils')
-const insertSort = (list) => {
+
+const insertsort = (list) => {
     const length = list.length
 
     // 外循环： 从第二个元素开始遍历
@@ -24,6 +24,6 @@ const insertSort = (list) => {
 
 if(require.main === module) {
     const list = [38, 545, 6, 9, 324, 1, 4, 564,17, 754]
-    const sorted = insertSort(list)
+    const sorted = insertsort(list)
     console.log(sorted)
 }
