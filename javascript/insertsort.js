@@ -27,3 +27,5 @@ if(require.main === module) {
     const sorted = insertsort(list)
     console.log(sorted)
 }
+
+module.exports = insertsort

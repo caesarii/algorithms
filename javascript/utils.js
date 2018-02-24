@@ -14,5 +14,13 @@ const exchange = (list, i, j) => {
 const less = (eleA, eleB) => {
     return eleA < eleB
 }
+
+if(require.main === module) {
+    const list = [0, 1, 2]
+    exchange(list, 0, 1)
+    log('list', list)
+}
+
+
 module.exports = {log, exchange}
 
