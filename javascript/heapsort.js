@@ -15,12 +15,11 @@ const perdown = (list, i, length) => {
         }
     }
     list[i] = temp
-    return list
 }
 
 const heapsort = list => {
     const length = list.length
-    for(let i = length / 2; i >= 0; i--) {
+    for(let i = Math.floor(length / 2); i >= 0; i--) {
         perdown(list, i , length)
     }
     
@@ -35,5 +34,5 @@ const heapsort = list => {
 if(require.main === module) {
     const list = [38, 545, 6, 9, 324, 1, 4, 564,17, 754]
     const sorted = heapsort(list)
-    console.log(sorted)
+    log(sorted)
 }

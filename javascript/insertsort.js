@@ -14,7 +14,7 @@ const insertsort = (list) => {
         for(let prev = current; prev > 0; prev --) {
             // 如果当前元素小于前面的元素，则交换两个元素
             if(list[prev] < list[prev - 1]) {
-                list = exchange(list, prev, prev - 1)
+                exchange(list, prev, prev - 1)
             }
         }
     }
@@ -24,6 +24,7 @@ const insertsort = (list) => {
 
 if(require.main === module) {
     const list = [38, 545, 6, 9, 324, 1, 4, 564,17, 754]
+    
     const sorted = insertsort(list)
     console.log(sorted)
 }

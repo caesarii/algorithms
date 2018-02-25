@@ -8,7 +8,6 @@ const exchange = (list, i, j) => {
     const temp = list[i]
     list[i] = list[j]
     list[j] = temp
-    return list
 }
 
 const less = (eleA, eleB) => {
