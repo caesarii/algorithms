@@ -10,21 +10,16 @@ def shellsort (list):
     increment = half(length)
 
     while increment > 0:
-        for i in range(increment, length):
-            temp = list[i]
-            j = i
-            while j >= increment:
-                if temp < list[j - increment]:
-                    list[j] = list[j - increment]
-                else:
-                    break
-                j = j - increment
+        for current in range(increment, length):
+            prev = current
+            while prev >= increment:
+                if list[prev] < list[prev - increment]:
+                    exchange(list, prev, prev - increment)
+                prev = prev - increment
 
-            list[j] = temp
         increment = half(increment)
-    return list
 
 if __name__ == '__main__':
     list = [38, 545, 6, 9, 324, 1, 4, 564, 17, 754]
-    sorted = shellsort(list)
-    log(sorted)
+    shellsort(list)
+    log(list)

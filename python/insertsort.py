@@ -3,7 +3,6 @@ from utils import log, exchange
 
 def insertsort(list):
     length = len(list)
-    # 
     for current in range(1, length):
         for prev in range(current, 0, -1):
             if list[prev] < list[prev - 1]:
