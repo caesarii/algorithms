@@ -6,7 +6,6 @@ const merge = (list, left, center, right) => {
     // left 之前是已经排序的元素
     // left - center 是当前要合并的左数组，不包含 center
     // center - right 是当前要合并的要数组
-
     const sorted = list.slice(0, left)
     const leftEnd = center - 1
     // 已排序数组的插入点，leftStart 之前的元素是已排序的
