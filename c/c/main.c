@@ -7,23 +7,30 @@
 //
 
 #include <stdio.h>
-#include "insertsort.h"
 #include "utils.h"
-
+#include "insertsort.h"
+#include "shellsort.h"
 
 void
 testInsertsort(void) {
     type list[] = {38, 545, 6, 9, 324, 1, 4, 564,17, 754};
     int length = 10;
     insertsort(list, length);
-//    printf("%d\n", list[1]);
-    qinglog(list, length);
-    
+    qinglog("insertsort", list, length);
+}
+
+void
+testShellsort(void) {
+    type list[] = {38, 545, 6, 9, 324, 1, 4, 564,17, 754};
+    int length = 10;
+    shellsort(list, length);
+    qinglog("shellsort", list, length);
 }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     testInsertsort();
+    testShellsort();
     
     printf("Hello, World!\n");
     return 0;
