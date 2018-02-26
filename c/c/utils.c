@@ -11,8 +11,8 @@
 
 
 void
-qinglog(type *list, int length) {
-    printf("log start: \n");
+qinglog(char *info, type *list, int length) {
+    printf("%s start: \n", info);
     for(int i = 0; i < length; i++) {
         printf("%d ", list[i]);
     }

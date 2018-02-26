@@ -12,13 +12,13 @@
 
 void
 insertsort(type *list, int numberOfElements) {
-    int prev;
     for(int current = 1; current < numberOfElements; current++) {
-        for(prev = current; prev > 0; prev --) {
+        
+        for(int prev = current; prev > 0; prev --) {
+            
             if(list[prev] < list[prev - 1]) {
                 exchange(list, prev, prev - 1);
             }
         }
     }
-    
 }

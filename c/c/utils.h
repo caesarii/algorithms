@@ -14,7 +14,7 @@
 typedef int type;
 
 void
-qinglog(type *list, int length);
+qinglog(char *info, type *list, int length);
 
 void
 exchange(type *list, int i, int j);
