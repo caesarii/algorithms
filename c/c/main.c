@@ -36,11 +36,20 @@ testHeapsort(void) {
     qinglog("heasort", list, length);
 }
 
+void
+testMergesort(void) {
+    type list[] = {38, 545, 6, 9, 324, 1, 4, 564,17, 754};
+    int length = 10;
+    mergesort_qing(list, length);
+    qinglog("mergesort", list, length);
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     testInsertsort();
     testShellsort();
     testHeapsort();
+    testMergesort();
     
     printf("Hello, World!\n");
     return 0;
