@@ -1,61 +1,74 @@
 
 const {log, exchange} = require('./utils')
 
-const merge = (list, sorted, leftStart, rightStart, rightEnd) => {
-    log('sorted', sorted)
-    
-    const leftEnd = rightStart - 1
-    
+const merge = (list, left, center, right) => {
+    // list 被 left  center, right 分割为三部分
+    // left 之前是已经排序的元素
+    // left - center 是当前要合并的左数组，不包含 center
+    // center - right 是当前要合并的要数组
+
+    const sorted = list.slice(0, left)
+    const leftEnd = center - 1
     // 已排序数组的插入点，leftStart 之前的元素是已排序的
-    let index = leftStart
-    
+    let current = left
     // 元素个数
-    const numElements = rightEnd - leftStart + 1
+    const num = right - left + 1
     
     // 按序插入左数组和右数组的元素
-    while(leftStart <= leftEnd && rightStart <= rightEnd) {
-        if(list[leftStart] <= list[rightStart]) {
-            sorted[index++] = list[leftStart ++]
+    while(left <= leftEnd && center <= right) {
+        if(list[left] <= list[center]) {
+            sorted[current] = list[left]
+            left ++
         } else {
-            sorted[index++] = list[rightStart++]
+            sorted[current] = list[center]
+            center ++
         }
+        current ++
     }
     
     // 插入左数组的剩余元素
-    while(leftStart <= leftEnd) {
-        sorted[index++] = list[leftStart++]
+    while(left <= leftEnd) {
+        sorted[current] = list[left]
+        current ++
+        left ++
     }
     
     // 插入右数组的剩余元素
-    while(rightStart <= rightEnd) {
-        sorted[index++] = list[rightStart++]
+    while(center <= right) {
+        sorted[current] = list[center]
+        current ++
+        center ++
     }
     
-    for(let i = 0; i < numElements; i++, rightEnd--) {
-        list[rightEnd] = sorted[rightEnd]
+    // 将已经排序好的元素逆序复制到 list  [left right]
+    // 为什么 sorted 的元素数等于 right
+    // merge 之前， sorted 的元素个数是 left - 1, 新合并的元素个数是 right - left + 1
+    // 所以合并后元素个数是 right
+    for(let i = 0; i < num; i++, right--) {
+        list[right] = sorted[right]
     }
     return list
 }
 
-const mergesortIter = (list, sorted, left, right) => {
-    let center
+const mergesortIter = (list, left, right) => {
     if(left < right) {
-        center = Math.floor((left + right) / 2)
-        mergesortIter(list, sorted, left, center)
-        mergesortIter(list, sorted, center + 1, right)
-        merge(list, sorted, left, center + 1, right)
+        let center = Math.floor((left + right) / 2)
+        mergesortIter(list, left, center)
+        mergesortIter(list, center + 1, right)
+        merge(list, left, center + 1, right)
+    } else {
+        return
     }
 }
 
 const mergesort = list => {
     const len = list.length
-    let sorted = []
-    mergesortIter(list, sorted, 0, len - 1)
-    return sorted
+    mergesortIter(list, 0, len - 1)
 }
 
 if(require.main === module) {
     const list = [38, 545, 6, 9, 324, 1, 4, 564, 17, 754]
-    const sorted = mergesort(list)
-    log('result', sorted)
+    const l = [38, 545]
+    mergesort(list)
+    log('result', list)
 }
