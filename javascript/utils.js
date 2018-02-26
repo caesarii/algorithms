@@ -10,8 +10,8 @@ const exchange = (list, i, j) => {
     list[j] = temp
 }
 
-const less = (eleA, eleB) => {
-    return eleA < eleB
+const half = n => {
+    return Math.floor(n / 2)
 }
 
 if(require.main === module) {
@@ -21,5 +21,5 @@ if(require.main === module) {
 }
 
 
-module.exports = {log, exchange}
+module.exports = {log, exchange, half, }
 

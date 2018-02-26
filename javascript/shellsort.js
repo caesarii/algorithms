@@ -1,8 +1,5 @@
-const {log, exchange} = require('./utils')
+const {log, exchange, half} = require('./utils')
 
-const half = n => {
-    return Math.floor(n / 2)
-}
 
 const shellsort = (list) => {
     const length = list.length
