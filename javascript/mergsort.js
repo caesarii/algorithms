@@ -46,7 +46,6 @@ const merge = (list, left, center, right) => {
     for(let i = 0; i < num; i++, right--) {
         list[right] = sorted[right]
     }
-    return list
 }
 
 const mergesortIter = (list, left, right) => {

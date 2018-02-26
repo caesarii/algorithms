@@ -25,9 +25,6 @@ def merge(lst, left, center, right):
     for i in range(num):
         list[right] = sorted[right]
         right -= 1
-    return lst
-
-
 
 def mergesortIter(list, left, right):
     if left < right:

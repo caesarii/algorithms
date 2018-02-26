@@ -15,11 +15,11 @@ const perdown = (list, current, length) => {
         current = child
         child = current * 2 + 1
     }
-    
 }
 
 const heapsort = list => {
     const length = list.length
+    
     // 建立 max 堆
     for(let i = Math.floor(length / 2); i >= 0; i--) {
         perdown(list, i , length)

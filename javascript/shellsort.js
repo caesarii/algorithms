@@ -1,13 +1,10 @@
 const {log, exchange} = require('./utils')
 
-const floor = Math.floor
-
 const half = n => {
     return Math.floor(n / 2)
 }
 
 const shellsort = (list) => {
-    
     const length = list.length
     
     // 遍历增量序列
@@ -28,7 +25,6 @@ const shellsort = (list) => {
         }
         
     }
-    
 }
 
 if(require.main === module) {
