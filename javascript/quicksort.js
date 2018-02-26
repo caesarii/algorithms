@@ -1,5 +1,4 @@
 const {log, exchange} = require('./utils')
-const insertsort = require('./insertsort')
 
 // 三数中值排序法
 const median = (list, left, right) => {
@@ -16,10 +15,7 @@ const median = (list, left, right) => {
         exchange(list, center, right)
     }
     
-    // 将枢纽元放置在
-    exchange(list, center, right - 1)
-    // log('median', list)
-    return list[right - 1]
+    return list[center]
 }
 
 const quicksortIter = (list, left, right, mode) => {
@@ -33,23 +29,24 @@ const quicksortIter = (list, left, right, mode) => {
         }
         return
     }
-    // 枢纽元
     
+    // 枢纽元
     const pivot = median(list, left, right)
+    // 将枢纽元放置在 right - 1
+    exchange(list, Math.floor((left + right) / 2), right - 1)
     log('pivot', pivot)
     
-    let i = left // left 一定小于 pivot
-    let j = right - 1 // right 一定大于 pivot, right - 1 放置 pivot
-    while(true) {
+    // 划分集合
+    let i = left + 1 // left 一定小于 pivot
+    let j = right - 2 // right 一定大于 pivot, right - 1 放置 pivot
+    while(true)  {
         // i 指向大于 pivot 的元素
-        
-        while(list[++i] < pivot) {
-        
+        while(list[i] < pivot) {
+            i += 1
         }
         // j 指向小于 pivot 的元素
-        
-        while(list[--j] > pivot) {
-        
+        while(list[j] > pivot) {
+            j -= 1
         }
         
         // 交换元素
@@ -63,6 +60,7 @@ const quicksortIter = (list, left, right, mode) => {
     exchange(list, i, right - 1)
     log('new list', list)
     log(mode, '\n')
+    // 递归
     quicksortIter(list, left, i - 1, `${mode} left`)
     quicksortIter(list, i + 1, right, `${mode} right`)
 }
@@ -70,12 +68,12 @@ const quicksortIter = (list, left, right, mode) => {
 const quicksort = list => {
     const len = list.length
     quicksortIter(list, 0, len - 1, 'first')
-    return list
+    
 }
 
 
 if(require.main === module) {
     const list = [38, 545, 6, 9, 324, 1, 4, 564, 17, 754]
-    const sorted = quicksort(list)
-    console.log(sorted)
+    quicksort(list)
+    log(list)
 }
