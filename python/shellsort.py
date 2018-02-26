@@ -7,8 +7,8 @@ def half(n):
 
 def shellsort (list):
     length = len(list)
-    increment = half(length)
 
+    increment = half(length)
     while increment > 0:
         for current in range(increment, length):
             prev = current
