@@ -11,6 +11,7 @@
 		5E8570F02043F4F5005B4ACB /* insertsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570EF2043F4F5005B4ACB /* insertsort.c */; };
 		5E8570F32043F94F005B4ACB /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570F22043F94F005B4ACB /* utils.c */; };
 		5E8570F62043FFCE005B4ACB /* shellsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570F52043FFCE005B4ACB /* shellsort.c */; };
+		5E8570F920440442005B4ACB /* heapsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570F820440442005B4ACB /* heapsort.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		5E8570F22043F94F005B4ACB /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		5E8570F42043FFCE005B4ACB /* shellsort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shellsort.h; sourceTree = "<group>"; };
 		5E8570F52043FFCE005B4ACB /* shellsort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shellsort.c; sourceTree = "<group>"; };
+		5E8570F720440442005B4ACB /* heapsort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = heapsort.h; sourceTree = "<group>"; };
+		5E8570F820440442005B4ACB /* heapsort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = heapsort.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				5E8570EF2043F4F5005B4ACB /* insertsort.c */,
 				5E8570F42043FFCE005B4ACB /* shellsort.h */,
 				5E8570F52043FFCE005B4ACB /* shellsort.c */,
+				5E8570F720440442005B4ACB /* heapsort.h */,
+				5E8570F820440442005B4ACB /* heapsort.c */,
 				5E8570F12043F94F005B4ACB /* utils.h */,
 				5E8570F22043F94F005B4ACB /* utils.c */,
 			);
@@ -137,6 +142,7 @@
 				5E8570F62043FFCE005B4ACB /* shellsort.c in Sources */,
 				5E8570F32043F94F005B4ACB /* utils.c in Sources */,
 				5E8570F02043F4F5005B4ACB /* insertsort.c in Sources */,
+				5E8570F920440442005B4ACB /* heapsort.c in Sources */,
 				5E8570E82043F2A4005B4ACB /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
