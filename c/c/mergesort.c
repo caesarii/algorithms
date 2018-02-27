@@ -46,7 +46,7 @@ void merge(type *list, int left, int center, int right) {
     for(int i = 0; i < num; i++, right--) {
         list[right] = sorted[right];
     }
-    free(sorted);
+    // free(sorted);
 };
 
 void mergesortIter(type *list, int left, int right) {

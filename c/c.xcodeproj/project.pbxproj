@@ -13,6 +13,7 @@
 		5E8570F62043FFCE005B4ACB /* shellsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570F52043FFCE005B4ACB /* shellsort.c */; };
 		5E8570F920440442005B4ACB /* heapsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570F820440442005B4ACB /* heapsort.c */; };
 		5E8570FC204407E6005B4ACB /* mergesort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570FB204407E6005B4ACB /* mergesort.c */; };
+		5E8570FF2044E431005B4ACB /* quicksort.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E8570FE2044E431005B4ACB /* quicksort.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		5E8570F820440442005B4ACB /* heapsort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = heapsort.c; sourceTree = "<group>"; };
 		5E8570FA204407E6005B4ACB /* mergesort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mergesort.h; sourceTree = "<group>"; };
 		5E8570FB204407E6005B4ACB /* mergesort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mergesort.c; sourceTree = "<group>"; };
+		5E8570FD2044E431005B4ACB /* quicksort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = quicksort.h; sourceTree = "<group>"; };
+		5E8570FE2044E431005B4ACB /* quicksort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = quicksort.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				5E8570F52043FFCE005B4ACB /* shellsort.c */,
 				5E8570FA204407E6005B4ACB /* mergesort.h */,
 				5E8570FB204407E6005B4ACB /* mergesort.c */,
+				5E8570FD2044E431005B4ACB /* quicksort.h */,
+				5E8570FE2044E431005B4ACB /* quicksort.c */,
 				5E8570F720440442005B4ACB /* heapsort.h */,
 				5E8570F820440442005B4ACB /* heapsort.c */,
 				5E8570F12043F94F005B4ACB /* utils.h */,
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8570FC204407E6005B4ACB /* mergesort.c in Sources */,
+				5E8570FF2044E431005B4ACB /* quicksort.c in Sources */,
 				5E8570F62043FFCE005B4ACB /* shellsort.c in Sources */,
 				5E8570F32043F94F005B4ACB /* utils.c in Sources */,
 				5E8570F02043F4F5005B4ACB /* insertsort.c in Sources */,

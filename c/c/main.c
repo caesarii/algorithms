@@ -11,6 +11,7 @@
 #include "insertsort.h"
 #include "shellsort.h"
 #include "heapsort.h"
+#include "quicksort.h"
 
 void
 testInsertsort(void) {
@@ -44,12 +45,21 @@ testMergesort(void) {
     qinglog("mergesort", list, length);
 }
 
+void
+testQuicksort(void) {
+    type list[] = {38, 545, 6, 9, 324, 1, 4, 564,17, 754};
+    int length = 10;
+    quicksort(list, length);
+    qinglog("quicksort", list, length);
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     testInsertsort();
     testShellsort();
     testHeapsort();
     testMergesort();
+    testQuicksort();
     
     printf("Hello, World!\n");
     return 0;
