@@ -3,15 +3,18 @@ const {log, exchange} = require('./utils')
 // 三数中值排序法
 const median = (list, left, right) => {
     // 对 left， center, right进行排序
-    const center = Math.floor((left + right) / 2)
+    const center = Math.floor((left + right) /2 2)
     log('median', list[left], list[center], list[right])
-    if(list[left] > list[center]) {
+    const l = list[left]
+    const r = list[right]
+    const c = list[center]
+    if(l > c) {
         exchange(list, left, center)
     }
-    if(list[left] > list[right]) {
+    if(l > r) {
         exchange(list, left, right)
     }
-    if(list[center] > list[right]) {
+    if(c > r) {
         exchange(list, center, right)
     }
     
@@ -33,7 +36,8 @@ const quicksortIter = (list, left, right, mode) => {
     // 枢纽元
     const pivot = median(list, left, right)
     // 将枢纽元放置在 right - 1
-    exchange(list, Math.floor((left + right) / 2), right - 1)
+    const center = Math.floor((left + right) / 2)
+    exchange(list, center, right - 1)
     log('pivot', pivot)
     
     // 划分集合
