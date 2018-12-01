@@ -17,6 +17,7 @@ const selection = (A) => {
         const min = A[k]
         A[k] = A[j]
         A[j] = min
+        log('sorted A', A.slice(0, j + 1))
     }
 }
 
