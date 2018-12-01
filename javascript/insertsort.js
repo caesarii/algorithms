@@ -1,17 +1,19 @@
 const {log, exchange} = require('./utils')
 
-const insertsort = (list) => {
-    const length = list.length
-    
+const insertsort = (A) => {
     // 从第二个元素开始遍历数组
-    for(let current = 1; current < length; current++){
-        // 从当前元素往前遍
-        for(let prev = current; prev > 0; prev --) {
-            // 如果当前元素小于前面的元素，则交换两个元素
-            if(list[prev] < list[prev - 1]) {
-                exchange(list, prev, prev - 1)
-            }
+    for(let j = 1; j < A.length; j++){
+        const key = A[j]
+        // 从当前元素往前遍历
+        let i = j - 1;
+        // 如果比较元素大于当前元素，则将比较元素后移
+        while(i > -1 && A[i] > key) {
+            A[i + 1] = A[i]
+            i = i - 1
         }
+        // 如果比较元素小于当前元素, 则插入当前元素
+        A[i + 1] = key;
+        log('sorted A', A.slice(0, j + 1))
     }
 }
 
